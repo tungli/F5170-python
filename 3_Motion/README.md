@@ -13,7 +13,7 @@ This is the function that an ODE solver (usually) needs.
 
 In our problem we treat positions and velocities as variables and express their derivatives as functions of these variables:
 
-![Equation of Motion](http://mathurl.com/y79nmta7.png)
+![Equation of Motion](http://mathurl.com/yaan82k2.png)
 
 where *F* is the Lorentz force.
 
