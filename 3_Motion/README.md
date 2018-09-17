@@ -15,14 +15,14 @@ In our problem we treat positions and velocities as variables and express their 
 
 ![Equation of Motion](http://mathurl.com/y79nmta7.png)
 
-where $F$ is the Lorentz force.
+where *F* is the Lorentz force.
 
 **Note:** There is another way! Here a general approach to ODE is shown but to integrate second order ODEs it is usually not necessary to transform to first order set. 
 Another way is, for example, to use the *leapfrog* algorithm. 
 If you are not comfortable with using a blackbox solver, this is the way for you. Try googling "Boris leapfrog" and implementing it in your code.
 
 ## Implementation
-In this implementation we will be using the `odeint` solver from the `scipy.integrate` subpackage which is a Python wrap around `ODEPACK` library written in Fortran.
+In this implementation we will be using the `odeint` solver from the `scipy.integrate` subpackage which is a Python wrap around the *ODEPACK* library written in Fortran.
 To understand the inputs, outputs and options of the solver, you can check out the [online reference](https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.integrate.odeint.html).
 
 You can take a look at a basic script that integrates the equation of motion placed in this directory, named `motion.py`
