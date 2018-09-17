@@ -1,22 +1,3 @@
----
-#title:
-#author:
-#date:
-#institute:
-#abstract:
-#thanks:
-#keywords:
-#lang:
-#bibliography:
-#csl: /home/tungli/Downloads/csl_styles/csls/acta-philosophica 
-#geometry: left=3cm,right=3cm,top=3cm,bottom=3cm
-#fontsize:
-#Beamer:
-#theme:
-#aspectratio:
-#More at: http://pandoc.org/MANUAL.html#variables-set-by-pandoc
----
-
 # Particle drift
 This sections covers exercises 3.1, 3.2, 3.3 and 3.1.a.
 
@@ -31,7 +12,9 @@ We can then create a function in Python which for a given set of values of varia
 This is the function that an ODE solver (usually) needs.
 
 In our problem we treat positions and velocities as variables and express their derivatives as functions of these variables:
+
 ![Equation of Motion](http://mathurl.com/y79nmta7)
+
 where $F$ is the Lorentz force.
 
 **Note:** There is another way! Here a general approach to ODE is shown but to integrate second order ODEs it is usually not necessary to transform to first order set. 
