@@ -10,9 +10,9 @@ def derivs(y,t,E,q,m,magM):
 
 def bfield(r,M):
     #This function calculates the magnetic field from the magnetic moment
-    l = np.linalg.norm(r)
-    mr = np.dot(m,r)
-    return 1e-7*(3*mr/l**5*r - m/l**3)
+
+
+
 
 E = np.array([1.0,0.0,0.0])
 magM = np.array([0.0,0.0,1.0])
