@@ -1,5 +1,5 @@
 ---
-title: 3. Motion in elmag. fields
+#title:
 #author:
 #date:
 #institute:
@@ -31,10 +31,7 @@ We can then create a function in Python which for a given set of values of varia
 This is the function that an ODE solver (usually) needs.
 
 In our problem we treat positions and velocities as variables and express their derivatives as functions of these variables:
-\begin{gather}
-    \dot{\vec{r}} = \vec{v} \qquad \qquad
-    \dot{\vec{v}} = \vec{F},
-\end{gather}
+![Equation of Motion](http://mathurl.com/y79nmta7)
 where $F$ is the Lorentz force.
 
 **Note:** There is another way! Here a general approach to ODE is shown but to integrate second order ODEs it is usually not necessary to transform to first order set. 
@@ -77,9 +74,8 @@ The function also has contains the independent variable `t` which is not used in
 I am using the `np.cross()` function to keep the code similar to the vector equations but you can write the equations for each component separately in your function if you want to.
 
 ```python
-y = [0.0,0.0,0.0,0.0,0.0,0.0]
-E = [1.0,0.0,0.0]
-B = [0.0,0.0,1.0]
+E = np.array([1.0,0.0,0.0])
+B = np.array([0.0,0.0,1.0])
 q = 1.0
 m = 1.0
 
@@ -87,7 +83,7 @@ ti = 0.0
 tf = 10.0
 num_points = 1000
 t = np.linspace(ti,tf,num_points)
-y0 = [0.0,0.0,0.0,0.0,0.0,0.0]
+y0 = np.array([0.0,0.0,0.0,0.0,0.0,0.0])
 
 res = itg.odeint(derivs,y0,t,args=(E,B,q,m))
 ```
@@ -104,10 +100,6 @@ plt.plot(y,x)
 plt.show(block=True)
 ```
 Now we only extract things we want from the result and create a plot.
-
-
-
-
 
 
 
