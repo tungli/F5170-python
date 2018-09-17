@@ -5,11 +5,11 @@ This sections covers exercises 3.1, 3.2, 3.3 and 3.1.a.
 
 The exercises want us to solve the equation of motion for a charged particle in a electromagnetic field.
 The equation of motion is a set of 3 (x,y,z) ordinary differential equations (ODE) of second order.
-To solve a system of ODEs, we usually transform the set of second order equations to first order.
+To solve a system of ODEs, we usually transform the set of higher order equations to first order equations.
 We will create more variables by doing this but that's fine.
 Then we express the first order derivatives as functions of variables and other first order derivatives.
 We can then create a function in Python which for a given set of values of variables evaluates the derivatives.
-This is the function that an ODE solver (usually) needs.
+This is the function that a general ODE solver needs.
 
 In our problem we treat positions and velocities as variables and express their derivatives as functions of these variables:
 
