@@ -29,7 +29,7 @@ f.close()
 b = [a[0::3][1:-1],a[1::3][1::]]
 ```
  * What is stored in variable `b`? 
- * Can you understand what each line of the code does? Try running each line one-by-one and printing the contents of it. Try changing the indices in the last line.
+ * Can you understand what each line of the code does? Try running each line one-by-one and printing the contents of it. Try changing the indices in the last line. You can also check out [this page](https://www.pythoncentral.io/cutting-and-slicing-strings-in-python/).
  * Can you create a list which contains the plasma names and their temperature?  
 
 Now use your function to calculate the Debye lengths of all plasmas with only one function call.
