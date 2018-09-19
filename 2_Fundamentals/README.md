@@ -1,8 +1,8 @@
 # Extra problems
 
 ## Vector product
-Write a function which accepts 5 arguments: *q,m,v,E,B*, and calculates the Lorentz force.
-Browse the internet to find the function which calculates the vector product of two 3-element vectors and implement it in your function.
+Write a function that accepts 5 arguments: *q,m,v,E,B*, and calculates the Lorentz force.
+Browse the internet to find the function which calculates the [vector product](https://en.wikipedia.org/wiki/Cross_product) of two 3-element vectors and implement it in your function.
 Test your function. 
 
 ## Debye length
@@ -28,10 +28,11 @@ a = f.read().replace('\n',' ').replace('  ',' ').split(' ')
 f.close()
 b = [a[0::3][1:-1],a[1::3][1::]]
 ```
-What is stored in variable `b`? Can you understand what each line of the code does?
-Try running each line one-by-one and printing the contents of it.
-Try changing the indices in the last line.
-Can you create a list which contains the plasma names and their temperature?
+ * What is stored in variable `b`? 
+ * Can you understand what each line of the code does? Try running each line one-by-one and printing the contents of it. Try changing the indices in the last line.
+ * Can you create a list which contains the plasma names and their temperature?  
+
+Now use your function to calculate the Debye lengths of all plasmas with only one function call.
 
 ## Larmor radius
 What will be the trajectory of a charged partice with an initial velocity in homogeneous magnetic field?
@@ -44,16 +45,15 @@ In this file there are 3 columns -- 1. column is time, 2.column is the *x*-posit
 
 If working in MATLAB:
  * Search the internet for the documentation of the `dlmread()` function
- * Try it out on the file
 
 If working in Python:
  * Search the internet for the documentation of the `loadtxt()` function from the NumPy package
- * Try it out on the file
 
-Plot *x* as a function of time.
-Plot *y* as a function of *x*
+Try it out on the file.
 
-Suggest a method to extract the Larmor radius from the data.
+Now, plot *x* as a function of time and *y* as a function of *x*.
+
+Suggest how to get an estimate of the Larmor radius from the data.
 Implement the method.  
 
 Assume the charged particle in the trajectory was an electron with an intial velocity of 1 m/s.
