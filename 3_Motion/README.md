@@ -7,7 +7,7 @@ The exercises want us to solve the equation of motion for a charged particle in 
 The equation of motion is a set of 3 (x,y,z) ordinary differential equations (ODE) of second order.
 To solve a system of ODEs, we usually transform the set of higher order equations to first order equations.
 We will create more variables by doing this but that's fine.
-Then we express the first order derivatives as functions of variables and other first order derivatives.
+We express the first order derivatives as functions of variables and other first order derivatives.
 We can then create a function in Python which for a given set of values of variables evaluates the derivatives.
 This is the function that a general ODE solver needs.
 
