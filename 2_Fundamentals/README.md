@@ -1,5 +1,8 @@
 # Extra problems
 
+Complete the problems 2.1 and 2.2 in the material for MATLAB first.
+You can then try solving the following problems.
+
 ## Vector product
 Write a function that accepts 5 arguments: *q,m,v,E,B*, and calculates the Lorentz force.
 Browse the internet to find the function which calculates the [vector product](https://en.wikipedia.org/wiki/Cross_product) of two 3-element vectors and implement it in your function.
@@ -19,7 +22,9 @@ If working in MATLAB:
  * Use the *Home -> Import Data* graphical interface. 
  * After selecting what you want to import and confirming *Import Data* you will create a variable that you can work with further
  * Inspect this variable by double-clicking at it in the *Workspace* window.
- * Write the name of the variable followed by a dot and press Tab. Can you extract a single column from the table?
+ * Write the name of the variable followed by a dot and press the `Tab` key. Can you extract a single column from the table?
+
+![tabcompletion](https://github.com/tungli/F5170-python/blob/master/2_Fundamentals/tab_completion_matlab.png)
 
 If working in Python consider the following few lines of code:
 ```python
@@ -33,6 +38,7 @@ b = [a[0::3][1:-1],a[1::3][1::]]
  * Can you create a list which contains the plasma names and their temperature?  
 
 Now use your function to calculate the Debye lengths of all plasmas with only one function call.
+Be aware that vector element-wise vector division and multiplication require different functions than normal division/multiplication.
 
 ## Larmor radius
 What will be the trajectory of a charged partice with an initial velocity in homogeneous magnetic field?
