@@ -1,11 +1,11 @@
 # Data processing
 
-In this chapter, you will learn to use _*for*_-loops and _*if*_ statement blocks.
+In this chapter, you will learn to use *for*-loops and *if* statement blocks.
 
 You will understand how to do those just by going over the examples, so I will not go into detail here.
 When writting statements in Python just **do not forget indenting and `:` signs**.
 
-Let us take a look at the scrips you will need for the exercises
+Let us take a look at the scrips you will need for the exercises.
 
 ## Simple plot
 ```python
@@ -58,7 +58,7 @@ We created a more sophisticated version of matrix inversion.
 It notifies us when the matrix is not square or when its determinant is zero and in these cases, it does not try to call the matrix inversion funcion.
 Couple of things to notice:
  * `np.shape()` returns a `tuple` (an object similar to `list`) with the array's size.
- * `if`,`elif` are followed by a condition and `:` symbol. A condition has a value of `True` or `False`.
+ * `if`,`elif` are followed by a condition and a `:` symbol. A condition has a value of `True` or `False`.
  * Indenting is used, just as in for-loops and functions
  * `return` keyword exits the function with the desired value.
 
