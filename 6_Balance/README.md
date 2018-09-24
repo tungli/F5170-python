@@ -1,5 +1,7 @@
 # Particle balance in plasma
 
+![Concentration Evolution](https://github.com/tungli/F5170-python/blob/master/6_Balance/reactions.svg)
+
 ## Implementation
 The whole [script](https://github.com/tungli/F5170-python/blob/master/6_Balance/odesolve.py) is in this repository.
 The details are discussed below.
