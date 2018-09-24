@@ -31,9 +31,9 @@ If you are not comfortable with using a blackbox solver, this is the way for you
     * What is the direction of the drift for an electron a what for a positron?   
    
    **Problem 2**
-    * Now configure the parameters for a proton
-    * How many times do you have to increase/decrease the time scale for the plot of the trajectory to be comparable to that of an electron
-    * Compare the amplitudes of the oscillation and the magnitudes of the drift velocities for proton and electron
+   * Now configure the parameters for a proton
+   * How many times do you have to increase/decrease the time scale for the plot of the trajectory to be comparable to that of an electron
+   * Compare the amplitudes of the oscillation and the magnitudes of the drift velocities for proton and electron
    
    **Problem 3**
    * Study a charged particle in the following field and with the following velocity:
