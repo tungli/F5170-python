@@ -24,11 +24,11 @@ If you are not comfortable with using a blackbox solver, this is the way for you
 ## Problems
 
  **Problem 1**
- * Run the [script](https://github.com/tungli/F5170-python/blob/master/3_Motion/motion.py).
- * Configure the velocity, position and fields as you want.
- * Configure the mass and charge to that of an electron.
- * What kind of drift do you observe?   
- * What is the direction of the drift for an electron a what for a positron?   
+ * Run the [script](https://github.com/tungli/F5170-python/blob/master/3_Motion/motion.py).  
+ * Configure the velocity, position and fields as you want.  
+ * Configure the mass and charge to that of an electron.  
+ * What kind of drift do you observe?  
+ * What is the direction of the drift for an electron a what for a positron?  
  
  **Problem 2**
  * Now configure the parameters for a proton
