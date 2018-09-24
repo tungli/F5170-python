@@ -38,6 +38,33 @@ for i,c in enumerate(colors):
 After the for-loop we tell Python it can show us the figure.
 
 ## Loading and plotting a matrix
+The script you will need to modify is [here](https://github.com/tungli/F5170-python/blob/master/4_Data/data_plot.py).
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+c = ['r','g','b','m','k','y','c']
+for i in range(0,3):
+    filename = 'csk' + str(i+1) + '.dat'
+    f = open(filename)
+    d = f.read()
+    f.close()
+    
+    data = d.replace('\t','\n').split('\n')[:-1:]
+    x = np.array([float(j) for j in data[0::2]])
+    y = np.array([float(j) for j in data[1::2]])
+
+    plt.plot(x,y,c[i],label=filename)
+    plt.xlim(0,1e6)
+
+plt.legend()
+plt.show(block=True)
+```
+In this script, we first import packages, then define a color vector, then we load the files *csk1.dat, csk2.dat* and *csk3.dat*, extract the data and plot it using a for-loop.
+
+The logarithmic plot should look similar to this:
+![Data](https://github.com/tungli/F5170-python/blob/master/4_Data/data_plot.svg)
+
 
 ## Inverse matrix
 ```python
@@ -61,6 +88,3 @@ Couple of things to notice:
  * `if`,`elif` are followed by a condition and a `:` symbol. A condition has a value of `True` or `False`.
  * Indenting is used, just as in for-loops and functions
  * `return` keyword exits the function with the desired value.
-
- 
-
