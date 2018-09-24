@@ -142,6 +142,7 @@ These just the things for the animation.
 You can add some labels or change the colors, etc.
 
 Here is an example of one frame from the animation:
+
 ![Evolution](https://github.com/tungli/F5170-python/blob/master/5_Interactions/evol_ex.svg)
 
 ## Rate coefficients
@@ -164,6 +165,7 @@ y = np.array([float(i) for i in data[1::2]])
 
 v = np.linspace(0.0,1e7,1e6)
 sigma = interp1d(x,y,kind='cubic',bounds_error=False,fill_value=0.0)
+
 
 def Fv(v):
     m = 9.109e-31 
@@ -192,6 +194,7 @@ Notice the arguments - `'cubic'` means to use the cubic interpolation, `bounds_e
 The `sigma` object will act like a function - meaning you can write `sigma(0.5e7)` to get the value at `0.5e7`.
 
 Here is plot with the interpolation:
+
 ![Rates Interpolation](https://github.com/tungli/F5170-python/blob/master/5_Interactions/rates_interp.svg)
 
 
