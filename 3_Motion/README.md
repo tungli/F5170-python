@@ -86,6 +86,9 @@ Now we only extract things we want from the result and create a plot.
 
 
 # Van Allen radiation belt
+
+![Van Allen](https://github.com/tungli/F5170-python/blob/master/3_Motion/van_allen.svg)
+
 Since the same equations and solvers apply here, let us jump to the implementation right away.
 
 ## Implementation
@@ -184,7 +187,6 @@ ax.set_zlabel("Z Axis")
 plt.show(block=True)
 ```
 ...and the trajectory.
-
 
 
 
