@@ -1,6 +1,5 @@
 # Particle drift
-This sections covers exercises 3.1, 3.2, 3.3 and 3.1.a.
-
+   
 ![Drift](https://github.com/tungli/F5170-python/blob/master/3_Motion/drift.svg)
 ## Matematical formulation
 
@@ -21,6 +20,32 @@ where *F* is the Lorentz force.
 **Note:** There is another way! Here a general approach to ODE is shown but to integrate second order ODEs it is usually not necessary to transform to first order set. 
 Another way is, for example, to use the *leapfrog* algorithm. 
 If you are not comfortable with using a blackbox solver, this is the way for you. Try googling "Boris leapfrog" and implementing it in your code.
+
+## Problems
+
+**Problem 1**
+   * Run the [script](https://github.com/tungli/F5170-python/blob/master/3_Motion/motion.py).
+   * Configure the velocity, position and fields as you want.
+   * Configure the mass and charge to that of an electron.
+   * What kind of drift do you observe?   
+   * What is the direction of the drift for an electron a what for a positron?   
+
+**Problem 2**
+   * Now configure the parameters for a proton
+   * How many times do you have to increase/decrease the time scale for the plot of the trajectory to be comparable to that of an electron
+   * Compare the amplitudes of the oscillation and the magnitudes of the drift velocities for proton and electron
+
+**Problem 3**
+   * Study a charged particle in the following field and with the following velocity:
+   ![prob3](http://mathurl.com/ycp4a5wj.png)
+   * Do you observe any drift? If yes, for what parameters did you use? What is the direction of the drift velocity for an electron and a positron?
+   * Try to match your observations with theoretical predictions.
+
+**Advanced problem**
+   * Study both an electron and a proton in an electric field which varies harmonically with time and in uniform magnetic field. Try different frequencies.
+   * How do they react to the field?
+   * Compare the effect for various frequencies 
+
 
 ## Implementation
 In this implementation we will be using the `odeint` solver from the `scipy.integrate` subpackage which is a Python wrap around the *ODEPACK* library written in Fortran.
