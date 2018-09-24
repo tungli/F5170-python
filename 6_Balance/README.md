@@ -1,6 +1,8 @@
 # Particle balance in plasma
 
 ## Implementation
+The whole [script](https://github.com/tungli/F5170-python/blob/master/6_Balance/odesolve.py) is in this repository.
+The details are discussed below.
 ```python
 import numpy as np
 from scipy.integrate import odeint
