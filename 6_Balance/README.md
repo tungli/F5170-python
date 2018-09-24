@@ -6,8 +6,7 @@ The details are discussed below.
 ```python
 import numpy as np
 from scipy.integrate import odeint
-import matplotlib.pyplot as plt
-
+import matplotlib.pyplot as plt 
 p = 1e5
 kB = 1.38e-23
 Tg = 400.0
@@ -71,7 +70,7 @@ We use the `odeint()` function to solve the problem numerically.
 
 ```python
 nAr = p/(kB*Tg) - y[:,0]- 0.5*y[:,2]- y[:,1]
-print(np.shape(y))
+
 plt.loglog(tspan,nAr,'c',basex=10, label='Ar')
 plt.loglog(tspan,y[:,0],'r',basex=10, label='Ar^*')
 plt.loglog(tspan,y[:,1],'b',basex=10, label='Ar^+')

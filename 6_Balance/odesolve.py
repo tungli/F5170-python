@@ -73,8 +73,9 @@ def f_k11(Te, Tg):
     return 1.0
 
 y = odeint(odefun,initial,tspan) 
+
 nAr = p/(kB*Tg) - y[:,0]- 0.5*y[:,2]- y[:,1]
-print(np.shape(y))
+
 plt.loglog(tspan,nAr,'c',basex=10, label='Ar')
 plt.loglog(tspan,y[:,0],'r',basex=10, label='Ar^*')
 plt.loglog(tspan,y[:,1],'b',basex=10, label='Ar^+')
