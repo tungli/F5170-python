@@ -35,7 +35,7 @@ print(np.pi)
 
 ## Maxwell-Boltzmann distribution
 Now, you should apply numerical integration to Maxwell-Boltzmann distribution to calculate mean values and compare these with the theoretical values.
-Here is a [script](https://github.com/tungli/F5170-python/tree/master/5_Interactions/maxwell.py) to guide you.
+Here is a [script](https://github.com/tungli/F5170-python/blob/master/5_Interactions/maxwell.py) to guide you.
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -63,7 +63,7 @@ plt.show(block=True)
 ```
 
 ## Time evolution of distribution function
-If all goes well, this [script](https://github.com/tungli/F5170-python/tree/master/5_Interactions/evol.py) play an animation showing a simple time evolution of simple distribution function.
+If all goes well, this [script](https://github.com/tungli/F5170-python/blob/master/5_Interactions/evol.py) play an animation showing a simple time evolution of simple distribution function.
 
 ```python
 import numpy as np
@@ -141,8 +141,11 @@ plt.show()
 These just the things for the animation.
 You can add some labels or change the colors, etc.
 
+Here is an example of one frame from the animation:
+![Evolution](https://github.com/tungli/F5170-python/blob/master/5_Interactions/evol_ex.svg)
+
 ## Rate coefficients
-You will find the data you need in this directory, here are the [rate coefficents](https://github.com/tungli/F5170-python/tree/master/5_Interactions/sigmaion.dat) to interpolate.
+You will find the data you need in this directory, here are the [rate coefficents](https://github.com/tungli/F5170-python/blob/master/5_Interactions/sigmaion.dat) to interpolate.
 
 We will be using the `interp1d()` from the `scipy.interpolate` subpackage.
 Take a look at the [online reference](https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.interp1d.html).
@@ -178,7 +181,7 @@ kr_beam = np.trapz(v*gaussian(v,vmean,vmean/100)*sigma(v),x=v)
 
 print(kr_MB,kr_beam)
 ```
-This is a script you can use for the exercise.
+This is a [script](https://github.com/tungli/F5170-python/blob/master/5_Interactions/interpol_rates.py) you can use for the exercise.
 In involves importing some packages, getting the data from a file, interpolating and integrating some functions.
 
 The interpolation takes place in this line:
@@ -187,5 +190,8 @@ sigma = interp1d(x,y,kind='cubic',bounds_error=False,fill_value=0.0)
 ```
 Notice the arguments - `'cubic'` means to use the cubic interpolation, `bounds_error=False` is to allow extrapolation as well, nevertheless, all the values that are extrapolated will be zero, since `fill_value=0.0`.
 The `sigma` object will act like a function - meaning you can write `sigma(0.5e7)` to get the value at `0.5e7`.
+
+Here is plot with the interpolation:
+![Rates Interpolation](https://github.com/tungli/F5170-python/blob/master/5_Interactions/rates_interp.svg)
 
 
