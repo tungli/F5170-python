@@ -1,6 +1,7 @@
 # Particle drift
 This sections covers exercises 3.1, 3.2, 3.3 and 3.1.a.
 
+![Drift](https://github.com/tungli/F5170-python/blob/master/3_Motion/drift.svg)
 ## Matematical formulation
 
 The exercises want us to solve the equation of motion for a charged particle in a electromagnetic field.
