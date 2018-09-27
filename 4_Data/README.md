@@ -1,11 +1,44 @@
 # Data processing
 
+## Exercises
+>  **Exercise 1**
+>  * Modify [this script](https://github.com/tungli/F5170-python/blob/master/4_Data/simple_plot.py) so that it plots:
+>  
+>  ![sinc](http://mathurl.com/y983ysyp.png)
+>  
+>  **Exercise 2**
+>  The [script](https://github.com/tungli/F5170-python/blob/master/4_Data/data_plot.py) takes the data in `csk[1-3].dat` and plots them.
+>  * Run the script with the data in the same directory
+>  * You can see that the magnitudes are too different and the plot is not very practical. Your task is to modify it so that:
+>    a. The electron energy is expressed in electrovolts (eV).
+>    b. The y-axis scale is logarithmic
+>  
+>  The logarithmic plot should look similar to this:
+>  ![Data](https://github.com/tungli/F5170-python/blob/master/4_Data/data_plot.svg)
+>  
+>  * Look at your plot -- what are the excitation and ionization thresholds?
+>  
+>  **Exercise 3**
+>  * Modify the script so that it converts the *x*-data from Kelvin to electronvolt and saves each cross-section to tab-delimited file named `csevN.dat` with `N` being the corresponding file number.
+>  
+>  **Exercise 4**
+>  * Find the function in Python which calculates the inverse of a (NumPy) matrix. 
+>  * Define a [singular matrix](http://mathworld.wolfram.com/SingularMatrix.html) and try calculating its inverse. What happens?
+>  * Run [this script](https://github.com/tungli/F5170-python/blob/master/4_Data/inverse_matrix.py) (described in a section below) and verify that it works correctly by testing it on various matrices.
+>  * Add another `elif` statement so that it displays a warning when the [matrix rank](http://mathworld.wolfram.com/MatrixRank.html) is greater than 10.
+>  
+>  **Advanced exercise**
+>  In this directory you will also find data files `adv_csk[1-3].dat`. Two of these files include electron temperature in electrovolts (eV) while one of them includes electron energy in Kelvin.
+>  * Modify the [script](https://github.com/tungli/F5170-python/blob/master/4_Data/data_plot.py) using *if-else* statements so that it decides which files should be converted and which not.
+>  * Such a script could be very useful when processing thousands of similar files. However, what are the limitations of your program?
+
+
 In this chapter, you will learn to use *for*-loops and *if* statement blocks.
 
 You will understand how to do those just by going over the examples, so I will not go into detail here.
 When writting statements in Python just **do not forget indenting and `:` signs**.
 
-Let us take a look at the scrips you will need for the exercises.
+Let us take a closer look at the scrips you will need for the exercises.
 
 ## Simple plot
 ```python
@@ -38,7 +71,6 @@ for i,c in enumerate(colors):
 After the for-loop we tell Python it can show us the figure.
 
 ## Loading and plotting a matrix
-The script you will need to modify is [here](https://github.com/tungli/F5170-python/blob/master/4_Data/data_plot.py).
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -61,9 +93,6 @@ plt.legend()
 plt.show(block=True)
 ```
 In this script, we first import packages, then define a color vector, then we load the files *csk1.dat, csk2.dat* and *csk3.dat*, extract the data and plot it using a for-loop.
-
-The logarithmic plot should look similar to this:
-![Data](https://github.com/tungli/F5170-python/blob/master/4_Data/data_plot.svg)
 
 
 ## Inverse matrix
