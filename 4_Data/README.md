@@ -27,8 +27,8 @@ In particular, `csk1.dat` contains the data for elastic collision:
 >  The [script](https://github.com/tungli/F5170-python/blob/master/4_Data/data_plot.py) takes the data in `csk[1-3].dat` and plots them.
 >  * Run the script with the data in the same directory
 >  * You can see that the magnitudes are too different and the plot is not very practical. Your task is to modify it so that:
->    a. The electron energy is expressed in electrovolts (eV).
->    b. The y-axis scale is logarithmic
+>    1. The electron energy is expressed in electrovolts (eV).
+>    2. The y-axis scale is logarithmic
 >  
 >  The logarithmic plot should look similar to this:
 >  ![Data](https://github.com/tungli/F5170-python/blob/master/4_Data/data_plot.svg)
