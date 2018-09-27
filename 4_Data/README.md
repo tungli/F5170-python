@@ -1,4 +1,21 @@
 # Data processing
+In this chapter, you will learn to use *for*-loops and *if* statement blocks.
+
+You will understand how to do those just by going over the examples, so I will not go into detail here.
+When writting statements in Python just **do not forget indenting and `:` signs**.
+
+The data files you will be working here (`csk[1-3].dat`) contain data for the cross sections of collision (in m<sup>2</sup>) of electrons with argon atom species for different temperatures (in Kelvins).
+In particular, `csk1.dat` contains the data for elastic collision:
+
+![coll](http://mathurl.com/ycnhzk89.png)
+
+`csk2.dat` for argon excitation:
+
+![exci](http://mathurl.com/ybd2s6ql.png)
+
+`csk3.dat` for argon ionization:
+
+![ioni](http://mathurl.com/ydyupuzm.png)
 
 ## Exercises
 >  **Exercise 1**
@@ -32,11 +49,6 @@
 >  * Modify the [script](https://github.com/tungli/F5170-python/blob/master/4_Data/data_plot.py) using *if-else* statements so that it decides which files should be converted and which not.
 >  * Such a script could be very useful when processing thousands of similar files. However, what are the limitations of your program?
 
-
-In this chapter, you will learn to use *for*-loops and *if* statement blocks.
-
-You will understand how to do those just by going over the examples, so I will not go into detail here.
-When writting statements in Python just **do not forget indenting and `:` signs**.
 
 Let us take a closer look at the scrips you will need for the exercises.
 
@@ -93,7 +105,6 @@ plt.legend()
 plt.show(block=True)
 ```
 In this script, we first import packages, then define a color vector, then we load the files *csk1.dat, csk2.dat* and *csk3.dat*, extract the data and plot it using a for-loop.
-
 
 ## Inverse matrix
 ```python
