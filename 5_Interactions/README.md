@@ -2,6 +2,8 @@
 
 This chapter is mostly about numerical integration and interpolation applied to the study of distribution function.
 
+
+
 ## Numerical integration
 We will be using the trapezoidal rule here.
 This is not the best choice but (hopefully) it will be enough.
@@ -35,7 +37,23 @@ print(np.pi)
 
 ## Maxwell-Boltzmann distribution
 Now, you should apply numerical integration to Maxwell-Boltzmann distribution to calculate mean values and compare these with the theoretical values.
-Here is a [script](https://github.com/tungli/F5170-python/blob/master/5_Interactions/maxwell.py) to guide you.
+
+## Exercises
+**Exercise 1**
+* Complete this [script](https://github.com/tungli/F5170-python/blob/master/5_Interactions/maxwell.py). The script should plot the Maxwell-Boltzmann distribution with repsect the velocity magnitude and a few points of interest, namely:
+ a. The mean speed
+ b. The mean squared speed (norm of the velocity vector)
+ c. The most probable speed
+* Calculate these values analytically and numerically. Compare them and explain any differences.
+* Look at the plot. Which of the 3 speeds is the lowest. Does their order change with temperature?
+* Change the number of points of integration. How does it affect the result of the integration?
+
+**Exercise 2**
+* The mass of nitrogen molecules is 28 a.m.u. and their number density at ambient conditions is approximately *1.7e25* m<sup>−3</sup>. How many nitrogen molecules in your room are faster than 50, 500, 1000, 2500, 5000 and 10000 m/s?
+
+**Exercise 3**
+#TODO
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
