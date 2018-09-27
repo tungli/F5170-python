@@ -41,9 +41,9 @@ Now, you should apply numerical integration to Maxwell-Boltzmann distribution to
 ## Exercises
 **Exercise 1**
 * Complete this [script](https://github.com/tungli/F5170-python/blob/master/5_Interactions/maxwell.py). The script should plot the Maxwell-Boltzmann distribution with repsect the velocity magnitude and a few points of interest, namely:
- a. The mean speed
- b. The mean squared speed (norm of the velocity vector)
- c. The most probable speed
+  a. The mean speed
+  b. The mean squared speed (norm of the velocity vector)
+  c. The most probable speed
 * Calculate these values analytically and numerically. Compare them and explain any differences.
 * Look at the plot. Which of the 3 speeds is the lowest. Does their order change with temperature?
 * Change the number of points of integration. How does it affect the result of the integration?
