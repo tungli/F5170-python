@@ -4,7 +4,7 @@ Complete the problems 2.1 and 2.2 in the material for MATLAB first.
 You can then try solving the following problems.
 
 ## Vector product
-Write a function that accepts 5 arguments: *q,m,v,E,B*, and calculates the Lorentz force.
+Write a function that accepts 5 arguments: *q,m,v,E,B*, and calculates the acceleration from the Lorentz force.
 Browse the internet to find the function which calculates the [vector product](https://en.wikipedia.org/wiki/Cross_product) of two 3-element vectors and implement it in your function.
 Test your function. 
 
