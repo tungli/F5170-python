@@ -1,8 +1,6 @@
 # Particle interactions in plasma
 
-This chapter is mostly about numerical integration and interpolation applied to the study of distribution function.
-
-
+This chapter is mostly about numerical integration and interpolation applied to the study of distribution functions.
 
 ## Numerical integration
 We will be using the trapezoidal rule here.
@@ -39,20 +37,25 @@ print(np.pi)
 Now, you should apply numerical integration to Maxwell-Boltzmann distribution to calculate mean values and compare these with the theoretical values.
 
 ## Exercises
-**Exercise 1**
-* Complete this [script](https://github.com/tungli/F5170-python/blob/master/5_Interactions/maxwell.py). The script should plot the Maxwell-Boltzmann distribution with repsect the velocity magnitude and a few points of interest, namely:
-  1. The mean speed
-  2. The mean squared speed (norm of the velocity vector)
-  3. The most probable speed
-* Calculate these values analytically and numerically. Compare them and explain any differences.
-* Look at the plot. Which of the 3 speeds is the lowest. Does their order change with temperature?
-* Change the number of points of integration. How does it affect the result of the integration?
-
-**Exercise 2**
-* The mass of nitrogen molecules is 28 a.m.u. and their number density at ambient conditions is approximately *1.7e25* m<sup>−3</sup>. How many nitrogen molecules in your room are faster than 50, 500, 1000, 2500, 5000 and 10000 m/s?
-
-**Exercise 3**
-#TODO
+>  **Exercise 1**
+>  * Complete this [script](https://github.com/tungli/F5170-python/blob/master/5_Interactions/maxwell.py). The script should plot the Maxwell-Boltzmann distribution with repsect the velocity magnitude and a few points of interest, namely:
+>    1. The mean speed
+>    2. The mean squared speed (norm of the velocity vector)
+>    3. The most probable speed
+>  * Calculate these values analytically and numerically. Compare them and explain any differences.
+>  * Look at the plot. Which of the 3 speeds is the lowest. Does their order change with temperature?
+>  * Change the number of points of integration. How does it affect the result of the integration?
+>  
+>  **Exercise 2**
+>  * The mass of nitrogen molecules is 28 a.m.u. and their number density at ambient conditions is approximately *1.7e25* m<sup>−3</sup>. How many nitrogen molecules in your room are faster than 50, 500, 1000, 2500, 5000 and 10000 m/s?
+>  
+>  **Exercise 3**
+>  The figure below shows three Maxwell-Boltzmann distributions.
+>  * Assume that the distributions differ only in temperature. Which of the distributions has the highest temperature and which the lowest?
+>  * Assume that the distributions differ only in particle mass. Which of the distributions has the highest mass and which the lowest?
+>  
+>  ![dists](https://github.com/tungli/F5170-python/blob/master/5_Interactions/dists.svg)
+>  
 
 ```python
 import numpy as np
@@ -80,8 +83,31 @@ plt.plot(v_sq_mean,Fv(v_sq_mean),'o')
 plt.show(block=True)
 ```
 
-## Time evolution of distribution function
-If all goes well, this [script](https://github.com/tungli/F5170-python/blob/master/5_Interactions/evol.py) play an animation showing a simple time evolution of simple distribution function.
+## Time evolution of a distribution function
+In the previous section you analyzed the distribution function of velocity magnitude.
+In this section you will be using 3 distribution functions for 3 Cartesian components of the velocity vector and you will look at a simple time evolution of a system described by distrubtion functions.
+
+Our simple model is based on the Boltzmann kinetic equation.
+
+![boltzmannEq]()
+
+We will assume homogenity in spatial coordinates, zero external force and for the collision term we will assume the following form (Krook):
+
+![krook]()
+
+Our kinetic equation therefore simplifies greatly, in fact, it can be integrated analytically:
+
+![kinetic]()
+
+##Exercises
+>  **Exercise 4**
+>  If all goes well, this [script](https://github.com/tungli/F5170-python/blob/master/5_Interactions/evol.py) play an animation showing a simple time evolution of simple distribution function.
+>  Answer the following questions:
+>  * What is the physical meaning of the initial condition for the distribution function?
+>  * What kind of particles could the distribution functions describe?
+>  * The collision frequency is *5e8* Hz, which is a resonable value. What is the time necessary for reaching the equilibrium?
+>  * Try increasing and decreasing the collision frequency in the script. What happens with the time necessary for reaching equilibrium and why?
+  
 
 ```python
 import numpy as np
