@@ -21,7 +21,7 @@ To transform a set of chemical reactions to a set of ordinary differential equat
 
 we used `[]` to represent the concentration.
 
-This may look scary, so here is an example with a one-way reaction:
+This may look scary, so here is an example with one-way reactions (like the ones for argon):
 
 ![ex](http://mathurl.com/ycv8c7w5.png)
 
