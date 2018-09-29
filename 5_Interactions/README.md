@@ -95,14 +95,14 @@ We will assume homogenity in spatial coordinates, zero external force and for th
 
 ![krook](http://mathurl.com/y77eakb6.png)
 
-where ν<sub>m</sub> is the collision frequency.
+where *ν<sub>m</sub>* is the collision frequency.
 
 Our kinetic equation therefore simplifies greatly, in fact, it can be integrated analytically:
 
-![kinetic](http://mathurl.com/yah5q7km.png)
+![kinetic](http://mathurl.com/ya2qhqxq.png)
 
 
-##Exercises
+## Exercises
 >  **Exercise 4**
 >  If all goes well, this [script](https://github.com/tungli/F5170-python/blob/master/5_Interactions/evol.py) play an animation showing a simple time evolution of simple distribution function.
 >  Answer the following questions:
@@ -195,7 +195,7 @@ Here is an example of one frame from the animation:
 ## Rate coefficients
 If you have a system described by a distribution function you have access to macroscopic properties of the system.
 Here, we will demonstrate this by calculating the rate constants of reactions taking place in plasma.
-Rate constants are calculated from collisional cross sections σ of a reaction indexed *r* as:
+Rate constants are calculated from collisional cross sections *σ* of a reaction indexed *r* as:
 
 ![rateintegral](http://mathurl.com/yde22kcc.png)
 
