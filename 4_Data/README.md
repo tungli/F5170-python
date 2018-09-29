@@ -17,6 +17,8 @@ In particular, `csk1.dat` contains the data for elastic collision:
 
 ![ioni](http://mathurl.com/ydyupuzm.png)
 
+The scripts referenced in the exercises are described in subsequent sections.
+
 ## Exercises
 >  **Exercise 1**
 >  * Modify [this script](https://github.com/tungli/F5170-python/blob/master/4_Data/simple_plot.py) so that it plots:
@@ -24,7 +26,7 @@ In particular, `csk1.dat` contains the data for elastic collision:
 >  ![sinc](http://mathurl.com/y983ysyp.png)
 >  
 >  **Exercise 2**
->  The [script](https://github.com/tungli/F5170-python/blob/master/4_Data/data_plot.py) takes the data in `csk[1-3].dat` and plots them.
+>  [This script](https://github.com/tungli/F5170-python/blob/master/4_Data/data_plot.py) takes the data in `csk[1-3].dat` and plots them.
 >  * Run the script with the data in the same directory
 >  * You can see that the magnitudes are too different and the plot is not very practical. Your task is to modify it so that:
 >    1. The electron energy is expressed in electrovolts (eV).
@@ -41,7 +43,7 @@ In particular, `csk1.dat` contains the data for elastic collision:
 >  **Exercise 4**
 >  * Find the function in Python which calculates the inverse of a (NumPy) matrix. 
 >  * Define a [singular matrix](http://mathworld.wolfram.com/SingularMatrix.html) and try calculating its inverse. What happens?
->  * Run [this script](https://github.com/tungli/F5170-python/blob/master/4_Data/inverse_matrix.py) (described in a section below) and verify that it works correctly by testing it on various matrices.
+>  * Run [this script](https://github.com/tungli/F5170-python/blob/master/4_Data/inverse_matrix.py) and verify that it works correctly by testing it on various matrices.
 >  * Add another `elif` statement so that it displays a warning when the [matrix rank](http://mathworld.wolfram.com/MatrixRank.html) is greater than 10.
 >  
 >  **Advanced exercise**
