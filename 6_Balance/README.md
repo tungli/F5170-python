@@ -14,10 +14,10 @@ In the picture below you will find the reactions and reaction rate temperature d
 ![scheme](https://github.com/tungli/F5170-python/blob/master/6_Balance/rates_table.png)
 
 To transform a set of chemical reactions to a set of ordinary differential equations (ODEs) describing the evolution of every species here is a general approach:
- * Take the *r*th equation of *M* reactions in total It has the form of [reac](http://mathurl.com/ycnjqt5p.png) where *a* and *b* are the stoichometric coefficients (always nonnegative) of species *X*. Generally, there are two rate constants - forward and backward rates.
- * The ODE for the *i*th specie is:
+ * Take the *r*th equation of *M* reactions in total It has the form of ![reac](http://mathurl.com/ycnjqt5p.png) where *a* and *b* are the stoichometric coefficients (always nonnegative) of species *X*. Generally, there are two rate constants - forward and backward rates.
+ * The ODE for the *i*th species is:
 
-![masterODE](http://mathurl.com/ycnjqt5p.png)
+![masterODE](http://mathurl.com/yd4yxekn.png)
 
 we used `[]` to represent the concentration.
 
