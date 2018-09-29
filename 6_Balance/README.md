@@ -9,7 +9,7 @@ It can be very useful be able to predict the concentration of species in time an
 
 Here, we will restrict our description to time evolution and assume two different temperatures - one for electrons, one for the heavy particles.
 The reaction scheme we will use is one for argon plasma at atmospheric pressure.
-In the picture below you will find the reactions and reaction rate temperature dependencies (third column), the data are from this [this article](https://journals.aps.org/pre/abstract/10.1103/PhysRevE.85.056404).
+In the picture below you will find the reactions and reaction rate temperature dependencies (third column), the data are from [this article](https://journals.aps.org/pre/abstract/10.1103/PhysRevE.85.056404).
 
 ![scheme](https://github.com/tungli/F5170-python/blob/master/6_Balance/rate_table.png)
 
