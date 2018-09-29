@@ -11,10 +11,10 @@ Here, we will restrict our description to time evolution and assume two differen
 The reaction scheme we will use is one for argon plasma at atmospheric pressure.
 In the picture below you will find the reactions and reaction rate temperature dependencies.
 
-![scheme](https://github.com/tungli/F5170-python/blob/master/6_Balance/rates_table.png)
+![scheme](https://github.com/tungli/F5170-python/blob/master/6_Balance/rate_table.png)
 
 To transform a set of chemical reactions to a set of ordinary differential equations (ODEs) describing the evolution of every species here is a general approach:
- * Take the *r*th equation of *M* reactions in total It has the form of ![reac](http://mathurl.com/ycnjqt5p.png) where *a* and *b* are the stoichometric coefficients (always nonnegative) of species *X*. Generally, there are two rate constants - forward and backward rates.
+ * Take the *r*th equation of *M* reactions in total. It has the form of ![reac](http://mathurl.com/ycnjqt5p.png) where *a* and *b* are the stoichiometric coefficients (always nonnegative) of species *X*. Generally, there are two rate constants - forward and backward rates.
  * The ODE for the *i*th species is:
 
 ![masterODE](http://mathurl.com/yd4yxekn.png)
