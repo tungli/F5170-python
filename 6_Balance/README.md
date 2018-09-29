@@ -23,7 +23,7 @@ we used `[]` to represent the concentration.
 
 This may look scary, so here is an example with a one-way reaction:
 
-![ex](http://mathurl.com/ydccwmfy.png)
+![ex](http://mathurl.com/ycv8c7w5.png)
 
 
 ## Implementation
