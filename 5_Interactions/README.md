@@ -87,17 +87,20 @@ plt.show(block=True)
 In the previous section you analyzed the distribution function of velocity magnitude.
 In this section you will be using 3 distribution functions for 3 Cartesian components of the velocity vector and you will look at a simple time evolution of a system described by distrubtion functions.
 
-Our simple model is based on the Boltzmann kinetic equation.
+Our simple model is based on the [Boltzmann transport equation](https://en.wikipedia.org/wiki/Boltzmann_equation)
 
-![boltzmannEq]()
+![boltzmannEq](http://mathurl.com/y9qsxtzt.png)
 
-We will assume homogenity in spatial coordinates, zero external force and for the collision term we will assume the following form (Krook):
+We will assume homogenity in spatial coordinates, zero external force and for the collision term we will assume the following form ([Krook](https://en.wikipedia.org/wiki/Bhatnagar%E2%80%93Gross%E2%80%93Krook_operator)):
 
-![krook]()
+![krook](http://mathurl.com/y77eakb6.png)
+
+where ν<sub>m</sub> is the collision frequency.
 
 Our kinetic equation therefore simplifies greatly, in fact, it can be integrated analytically:
 
-![kinetic]()
+![kinetic](http://mathurl.com/yah5q7km.png)
+
 
 ##Exercises
 >  **Exercise 4**
@@ -190,6 +193,15 @@ Here is an example of one frame from the animation:
 ![Evolution](https://github.com/tungli/F5170-python/blob/master/5_Interactions/evol_ex.svg)
 
 ## Rate coefficients
+If you have a system described by a distribution function you have access to macroscopic properties of the system.
+Here, we will demonstrate this by calculating the rate constants of reactions taking place in plasma.
+Rate constants are calculated from collisional cross sections σ of a reaction indexed *r* as:
+
+![rateintegral](http://mathurl.com/yde22kcc.png)
+
+Cross sections of most reactions do not have functional representations - they are available only as tabulated data.
+
+
 You will find the data you need in this directory, here are the [rate coefficents](https://github.com/tungli/F5170-python/blob/master/5_Interactions/sigmaion.dat) to interpolate.
 
 We will be using the `interp1d()` from the `scipy.interpolate` subpackage.
