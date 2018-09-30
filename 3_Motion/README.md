@@ -138,7 +138,7 @@ Earth's [Van Allen radiation belts](https://en.wikipedia.org/wiki/Van_Allen_radi
 Since the same equations and solvers apply here, let us jump to the implementation right away.
 
 ## Implementation
-The script is named `van_allen.py`.
+The script is in this repository, named [van_allen.py](https://github.com/tungli/F5170-python/blob/master/3_Motion/van_allen.py).
 You can see that the implementation is basically the same as with the particle drift study.
 Some differences here are:
  - We assume electric field is zero
