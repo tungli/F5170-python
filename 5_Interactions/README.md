@@ -201,8 +201,12 @@ Rate constants are calculated from collisional cross sections *σ* of a reaction
 
 Cross sections of most reactions do not have functional representations - they are available only as tabulated data.
 
+You will find the data you need in this directory, here are the [cross sections](https://github.com/tungli/F5170-python/blob/master/5_Interactions/sigmaion.dat) to interpolate.
+The first column of the data are speeds in m/s, the second column are the cross sections in m<sup>2</sup>.
+The cross section are those of argon ionization by electron impact:
 
-You will find the data you need in this directory, here are the [rate coefficents](https://github.com/tungli/F5170-python/blob/master/5_Interactions/sigmaion.dat) to interpolate.
+![arelimpioni](http://mathurl.com/ybcgs3t8.png)
+
 
 We will be using the `interp1d()` from the `scipy.interpolate` subpackage.
 Take a look at the [online reference](https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.interp1d.html).
