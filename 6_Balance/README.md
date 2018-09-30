@@ -26,7 +26,7 @@ This may look scary, so here is an example with one-way reactions (like the ones
 ![ex](http://mathurl.com/ycv8c7w5.png)
 
 
->  ## Exercises
+## Exercises
 >  **Exercise 1**
 >  * What is the unit of the time derivative of the concentration (source term)? What must be the unit of the rate constant for a reaction involving two reactants and what for a reaction involving three reactants?
 >  
