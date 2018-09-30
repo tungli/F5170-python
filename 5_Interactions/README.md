@@ -262,8 +262,7 @@ kr_beam = np.trapz(v*gaussian(v,vmean,vmean/100)*sigma(v),x=v)
 
 print(kr_MB,kr_beam)
 ```
-This is a [script](https://github.com/tungli/F5170-python/blob/master/5_Interactions/interpol_rates.py) you can use for the exercise.
-In involves importing some packages, getting the data from a file, interpolating and integrating some functions.
+The scipt involves importing some packages, getting the data from a file, interpolating and integrating some functions.
 
 The interpolation takes place in this line:
 ```python
@@ -272,7 +271,7 @@ sigma = interp1d(x,y,kind='cubic',bounds_error=False,fill_value=0.0)
 Notice the arguments - `'cubic'` means to use the cubic interpolation, `bounds_error=False` is to allow extrapolation as well, nevertheless, all the values that are extrapolated will be zero, since `fill_value=0.0`.
 The `sigma` object will act like a function - meaning you can write `sigma(0.5e7)` to get the value at `0.5e7`.
 
-Here is plot with the interpolation:
+Here is an example plot with the interpolation:
 
 ![Rates Interpolation](https://github.com/tungli/F5170-python/blob/master/5_Interactions/rates_interp.svg)
 
