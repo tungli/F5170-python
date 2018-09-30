@@ -208,6 +208,25 @@ The cross section are those of argon ionization by electron impact:
 ![arelimpioni](http://mathurl.com/ybcgs3t8.png)
 
 
+>  ## Exercises
+>  **Exercise 5**
+>  * Run this [scipt](https://github.com/tungli/F5170-python/blob/master/5_Interactions/interpol_rates.py). It calculates the rate constant from the cross section data using two different distribution function - a Maxwell-Boltzmann and a nearly monoenergetic distribution (delta function approximated by a Gaussian function). You will notice that the mean velocity is the same for both distributions but the rate constants differ. Provide an explanation.
+>  
+>  **Exercise 6**
+>  * Modify the script so that it plots cross section as function of speed.
+>  * Answer the following questions:
+>    1. What is the ionization threshold in electronvolts?
+>    2. Where does the cross section reach the maximum value?
+>  
+>  **Exercise 7**
+>  * Run the script for several electron temperatures.
+>  * What happens with the rate coefficients with increasing electron temperature?
+>  * Is there electron temperature for which the rate coefficient for the nearly monoenergetic beam exceeds the Maxwell-Boltzmann coefficient? Provide an explanation why this is/is not possible
+>  
+>  **Advanced Exercise**
+>  * Rewrite the scipt so that it uses electron energy rather than electron speed. Using electron energy is more common in plasma physics.
+  
+
 We will be using the `interp1d()` from the `scipy.interpolate` subpackage.
 Take a look at the [online reference](https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.interp1d.html).
 
