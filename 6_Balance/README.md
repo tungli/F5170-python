@@ -7,7 +7,7 @@ Plasmas usually contain a large number of species.
 These can be electrons, different elements or molecules, as well as ionized and excited species.
 It can be very useful be able to predict the concentration of species in time and space.
 
-Here, we will restrict our description to time evolution and assume two different temperatures - one for electrons, one for the heavy particles.
+Here, we will restrict our description to time evolution and assume two different temperatures - one for electrons, one for the heavy particles (gas temperature).
 The reaction scheme we will use is one for argon plasma at atmospheric pressure.
 In the picture below you will find the reactions and reaction rate temperature dependencies (third column), the data are from [this article](https://journals.aps.org/pre/abstract/10.1103/PhysRevE.85.056404).
 
@@ -26,9 +26,45 @@ This may look scary, so here is an example with one-way reactions (like the ones
 ![ex](http://mathurl.com/ycv8c7w5.png)
 
 
+##Exercises
+**Exercise 1**
+* What is the unit of the time derivative of the concentration (source term)? What must be the unit of the rate constant for a reaction involving two reactants and what for a reaction involving three reactants?
+
+**Exercise 2**
+If the argon gas was without excited and ionized species, the concentration of argon could be calculated from the equation of state for ideal gas.
+* Calculate the actual concentration of ground state argon in plasma given the gas temperature, gas pressure, and the concentration of excited and ionized species (Ar<sup>+</sup>, Ar<sup>\*</sup>, Ar<sup>+</sup><sub>2</sub>)
+
+**Exercise 3**
+Look at the [reaction table picture](https://github.com/tungli/F5170-python/blob/master/6_Balance/rate_table.png), reactions 1, 3, 4.
+* What is the unit of the constant in the exponential? What is its physical meaning?
+* Which reaction do you think will be the most important ionization channel?
+
+**Exercise 4**
+* Using the [reaction table picture](https://github.com/tungli/F5170-python/blob/master/6_Balance/rate_table.png) express the time derivatives of concentration (source terms) of species: e, Ar<sup>+</sup>, Ar<sup>\*</sup>, Ar<sup>+</sup><sub>2</sub>.
+
+**Exercise 5**
+* Complete the [script](https://github.com/tungli/F5170-python/blob/master/6_Balance/odesolve.py). In particular, you need to:
+  1. Write the expressions for the source terms (`SArs`,`SArp`,`SAr2p` and `Se`).
+  2. Create the functions for rate constants `f_k[1-11](Te,Tg)`
+  3. Run the script and decide if the output makes sense.
+
+**Exercise 6**
+Try increasing and decreasing the electron temperature and answer the following questions:
+* How does the equilibrium electron density change and why?
+* How does the ignition time change?
+* What is the dominant ion in the ignition phase and what is the dominant ion when the plasma stabilizes? Does the dominance of the two ions change with electron temperature?
+
+**Exercise 7**
+Run the program for your chosen value of electron temperature and for pressures of 10<sup>3</sup>, 10<sup>4</sup>, 10<sup>5</sup> and 10<sup>6</sup> Pa and answer the following questions:
+* How does the equilibrium electron density change and why?
+* How does the ignition time change?
+
+**Advanced Exercise**
+* Modify the program in the previous section so that it solves the system of equations for several values of *T*<sub>e</sub>*/p* and plots the steady-state number densities as functions of *T*<sub>e</sub>*/p*. You can do this by adding a for loop. What makes this exercise difficult is the fact that the ignition time changes quite quickly with electron temperature and pressure. Therefore, the time interval has to be updated in each iteration according to the current value of *T*<sub>e</sub> and *p*, otherwise the solution will take very long.
+
+
 ## Implementation
-The whole [script](https://github.com/tungli/F5170-python/blob/master/6_Balance/odesolve.py) is in this repository.
-The details are discussed below.
+The details of the script are discussed below.
 ```python
 import numpy as np
 from scipy.integrate import odeint
