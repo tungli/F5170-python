@@ -29,7 +29,7 @@ The scripts referenced in the exercises are described in subsequent sections.
 >  [This script](https://github.com/tungli/F5170-python/blob/master/4_Data/data_plot.py) takes the data in `csk[1-3].dat` and plots them.
 >  * Run the script with the data in the same directory
 >  * You can see that the magnitudes are too different and the plot is not very practical. Your task is to modify it so that:
->    1. The electron energy is expressed in electrovolts (eV).
+>    1. The electron energy is expressed in electronvolts (eV).
 >    2. The y-axis scale is logarithmic
 >  
 >  The logarithmic plot should look similar to this:
@@ -47,7 +47,7 @@ The scripts referenced in the exercises are described in subsequent sections.
 >  * Add another `elif` statement so that it displays a warning when the [matrix rank](http://mathworld.wolfram.com/MatrixRank.html) is greater than 10.
 >  
 >  **Advanced exercise**
->  In this directory you will also find data files `adv_csk[1-3].dat`. Two of these files include electron temperature in electrovolts (eV) while one of them includes electron energy in Kelvin.
+>  In this directory you will also find data files `adv_csk[1-3].dat`. Two of these files include electron temperature in electronvolts (eV) while one of them includes electron energy in Kelvin.
 >  * Modify the [script](https://github.com/tungli/F5170-python/blob/master/4_Data/data_plot.py) using *if-else* statements so that it decides which files should be converted and which not.
 >  * Such a script could be very useful when processing thousands of similar files. However, what are the limitations of your program?
 
