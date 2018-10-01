@@ -2,9 +2,9 @@
 In this chapter, you will learn to use *for*-loops and *if* statement blocks.
 
 You will understand how to do those just by going over the examples, so I will not go into detail here.
-When writting statements in Python just **do not forget indenting and `:` signs**.
+When writing statements in Python just **do not forget indenting and `:` signs**.
 
-The data files you will be working here (`csk[1-3].dat`) contain data for the cross sections of collision (in m<sup>2</sup>) of electrons with argon atom species for different temperatures (in Kelvins).
+The data files you will be working here (`csk[1-3].dat`) contain data for the cross sections of collision (in m<sup>2</sup>) of electrons with argon atom species for different temperatures (in Kelvin).
 In particular, `csk1.dat` contains the data for elastic collision:
 
 ![coll](http://mathurl.com/ycnhzk89.png)
@@ -69,7 +69,7 @@ for i in range(0,4):
 plt.legend()
 plt.show(block=True)
 ```
-In the beginning we import our favourite packages.
+In the beginning we import our favorite packages.
 Then, we define a `list` of `string`s.
 These are arguments used in `plot()` to define the color of the line.
 Next, we define a NumPy array for the plot.
@@ -129,7 +129,7 @@ def myinv(mat):
         return np.linalg.inv(mat)
 ```
 We created a more sophisticated version of matrix inversion.
-It notifies us when the matrix is not square or when its determinant is zero and in these cases, it does not try to call the matrix inversion funcion.
+It notifies us when the matrix is not square or when its determinant is zero and in these cases, it does not try to call the matrix inversion function.
 Couple of things to notice:
  * `np.shape()` returns a `tuple` (an object similar to `list`) with the array's size.
  * `if`,`elif` are followed by a condition and a `:` symbol. A condition has a value of `True` or `False`.
