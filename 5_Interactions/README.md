@@ -233,7 +233,6 @@ Take a look at the [online reference](https://docs.scipy.org/doc/scipy/reference
 ```python
 import numpy as np
 from scipy.interpolate import interp1d
-import matplotlib.pyplot as plt
 
 f = open("sigmaion.dat")
 d = f.read()
