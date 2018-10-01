@@ -11,7 +11,7 @@ To numerically integrate a function, you could just sum the functional values ev
 This corresponds to dividing the function into rectangles.
 This is called the midpoint rule. This is not optimal, because you would need a large number of intervals and, therefore, function evaluations to get a good accuracy.
 
-The trapeziodal rule is a simple improvement.
+The trapezoidal rule is a simple improvement.
 Instead of dividing into rectangles use trapezoids.
 
 In the NumPy package, there already is a implemented function that uses this method to integrate an array of functional values called `trapz()`.
@@ -38,12 +38,12 @@ Now, you should apply numerical integration to Maxwell-Boltzmann distribution to
 
 ## Exercises
 >  **Exercise 1**
->  * Complete this [script](https://github.com/tungli/F5170-python/blob/master/5_Interactions/maxwell.py). The script should plot the Maxwell-Boltzmann distribution with repsect the velocity magnitude and a few points of interest, namely:
+>  * Complete this [script](https://github.com/tungli/F5170-python/blob/master/5_Interactions/maxwell.py). The script should plot the Maxwell-Boltzmann distribution with respect the velocity magnitude and a few points of interest, namely:
 >    1. The mean speed
 >    2. The mean squared speed (norm of the velocity vector)
 >    3. The most probable speed
 >  * Calculate these values analytically and numerically. Compare them and explain any differences.
->  * Plot the distributions and the values of distributions at the caclulated speeds. Which of the 3 speeds is the lowest. Does their order change with temperature?
+>  * Plot the distributions and the values of distributions at the calculated speeds. Which of the 3 speeds is the lowest. Does their order change with temperature?
 >  * Change the number of points of integration. How does it affect the result of the integration?
 >  
 >  **Exercise 2**
@@ -85,13 +85,13 @@ plt.show(block=True)
 
 ## Time evolution of a distribution function
 In the previous section you analyzed the distribution function of velocity magnitude.
-In this section you will be using 3 distribution functions for 3 Cartesian components of the velocity vector and you will look at a simple time evolution of a system described by distrubtion functions.
+In this section you will be using 3 distribution functions for 3 Cartesian components of the velocity vector and you will look at a simple time evolution of a system described by distribution functions.
 
 Our simple model is based on the [Boltzmann transport equation](https://en.wikipedia.org/wiki/Boltzmann_equation)
 
 ![boltzmannEq](http://mathurl.com/y9qsxtzt.png)
 
-We will assume homogenity in spatial coordinates, zero external force and for the collision term we will assume the following form ([Krook](https://en.wikipedia.org/wiki/Bhatnagar%E2%80%93Gross%E2%80%93Krook_operator)):
+We will assume homogeneity in spatial coordinates, zero external force and for the collision term we will assume the following form ([Krook](https://en.wikipedia.org/wiki/Bhatnagar%E2%80%93Gross%E2%80%93Krook_operator)):
 
 ![krook](http://mathurl.com/y77eakb6.png)
 
@@ -108,7 +108,7 @@ Our kinetic equation therefore simplifies greatly, in fact, it can be integrated
 >  Answer the following questions:
 >  * What is the physical meaning of the initial condition for the distribution function?
 >  * What kind of particles could the distribution functions describe?
->  * The collision frequency is *5e8* Hz, which is a resonable value. What is the time necessary for reaching the equilibrium?
+>  * The collision frequency is *5e8* Hz, which is a reasonable value. What is the time necessary for reaching the equilibrium?
 >  * Try increasing and decreasing the collision frequency in the script. What happens with the time necessary for reaching equilibrium and why?
   
 
@@ -210,7 +210,7 @@ The cross section are those of argon ionization by electron impact:
 
 >  ## Exercises
 >  **Exercise 5**
->  * Run this [scipt](https://github.com/tungli/F5170-python/blob/master/5_Interactions/interpol_rates.py). It calculates the rate constant from the cross section data using two different distribution function - a Maxwell-Boltzmann and a nearly monoenergetic distribution (delta function approximated by a Gaussian function). You will notice that the mean velocity is the same for both distributions but the rate constants differ. Provide an explanation.
+>  * Run this [scipt](https://github.com/tungli/F5170-python/blob/master/5_Interactions/interpol_rates.py). It calculates the rate constant from the cross section data using two different distribution function - a Maxwell-Boltzmann and a nearly mono-energetic distribution (delta function approximated by a Gaussian function). You will notice that the mean velocity is the same for both distributions but the rate constants differ. Provide an explanation.
 >  
 >  **Exercise 6**
 >  * Modify the script so that it plots cross section as function of speed.
@@ -221,13 +221,13 @@ The cross section are those of argon ionization by electron impact:
 >  **Exercise 7**
 >  * Run the script for several electron temperatures.
 >  * What happens with the rate coefficients with increasing electron temperature?
->  * Is there electron temperature for which the rate coefficient for the nearly monoenergetic beam exceeds the Maxwell-Boltzmann coefficient? Provide an explanation why this is/is not possible
+>  * Is there electron temperature for which the rate coefficient for the nearly mono-energetic beam exceeds the Maxwell-Boltzmann coefficient? Provide an explanation why this is/is not possible
 >  
 >  **Advanced Exercise**
 >  * Rewrite the scipt so that it uses electron energy rather than electron speed. Using electron energy is more common in plasma physics.
   
 
-We will be using the `interp1d()` from the `scipy.interpolate` subpackage.
+We will be using the `interp1d()` from the `scipy.interpolate` sub-package.
 Take a look at the [online reference](https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.interp1d.html).
 
 ```python
