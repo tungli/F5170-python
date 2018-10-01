@@ -108,6 +108,11 @@ plt.show(block=True)
 ```
 In this script, we first import packages, then define a color vector, then we load the files *csk1.dat, csk2.dat* and *csk3.dat*, extract the data and plot it using a for-loop.
 
+There is no universal way to import data from files into Python, as far as I know - files are usually too different.
+Here we use `open()`-`read()`-`close()` sequence to get to the file into a string variable.
+Then we manipulate the string, particularly, we use the `str.replace()` and `str.split()` methods to separate the values and then apply indexing to group the columns together.
+We use [list comprehension](https://www.pythonforbeginners.com/basics/list-comprehensions-in-python) instead of initializing arrays and adding values in a *for*-loop to keep the code short.
+
 ## Inverse matrix
 ```python
 import numpy as np
