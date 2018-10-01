@@ -72,7 +72,7 @@ def Fv(v):
 
 v_mean = 
 v_sq_mean = 
-
+v_mp =
 v_mean_an = 
 v_sq_mean_an =
 v_mp_an =

@@ -10,12 +10,12 @@ def Fv(v):
     a = m/kB/T
     return np.sqrt(2/np.pi)*v**2*a**(3.0/2.0)*np.exp(-a/2*v**2)
 
-v_mean = 1000.0
-v_sq_mean = [i for i, j in zip(v,Fv(v)) if j == np.max(Fv(v))][0]
-
-#v_mean_an = 
-#v_sq_mean_an = 
-#v_mp_an =
+v_mean = 
+v_sq_mean = 
+v_mp =
+v_mean_an = 
+v_sq_mean_an = 
+v_mp_an =
 
 plt.plot(v,Fv(v))
 plt.plot(v_mean,Fv(v_mean),'o')
