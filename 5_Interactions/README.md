@@ -43,7 +43,7 @@ Now, you should apply numerical integration to Maxwell-Boltzmann distribution to
 >    2. The mean squared speed (norm of the velocity vector)
 >    3. The most probable speed
 >  * Calculate these values analytically and numerically. Compare them and explain any differences.
->  * Look at the plot. Which of the 3 speeds is the lowest. Does their order change with temperature?
+>  * Plot the distributions and the values of distributions at the caclulated speeds. Which of the 3 speeds is the lowest. Does their order change with temperature?
 >  * Change the number of points of integration. How does it affect the result of the integration?
 >  
 >  **Exercise 2**
