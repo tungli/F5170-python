@@ -1,7 +1,7 @@
 # Particle drift
    
 ![Drift](https://github.com/tungli/F5170-python/blob/master/3_Motion/drift.svg)
-## Matematical formulation
+## Mathematical formulation
 
 The exercises want us to solve the equation of motion for a charged particle in a electromagnetic field.
 The equation of motion is a set of 3 (x,y,z) ordinary differential equations (ODE) of second order.
@@ -19,7 +19,7 @@ where *F* is the Lorentz force.
 
 **Note:** There is another way! Here a general approach to ODE is shown but to integrate second order ODEs it is usually not necessary to transform to first order set. 
 Another way is, for example, to use the *leapfrog* algorithm. 
-If you are not comfortable with using a blackbox solver, this is the way for you. Try googling "Boris leapfrog" and implementing it in your code.
+If you are not comfortable with using a black-box solver, this is the way for you. Try googling "Boris leapfrog" and implementing it in your code.
 
 ## Exercises
 
@@ -49,7 +49,7 @@ If you are not comfortable with using a blackbox solver, this is the way for you
 >  * Compare the effect for various frequencies 
 
 ## Implementation
-In this implementation we will be using the `odeint` solver from the `scipy.integrate` subpackage which is a Python wrap around the *ODEPACK* library written in Fortran.
+In this implementation we will be using the `odeint` solver from the `scipy.integrate` sub-package which is a Python wrap around the *ODEPACK* library written in Fortran.
 To understand the inputs, outputs and options of the solver, you can check out the [online reference](https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.integrate.odeint.html).
 
 You can take a look at a basic script that integrates the equation of motion placed in this directory, named `motion.py`
@@ -64,11 +64,11 @@ import matplotlib.pyplot as plt
 Here we import the Python libraries we will need. 
 
 As was mentioned before `SciPy` offers an implementation of ODE solver.
-We import the subpackage `integrate` and call it `itg`.
+We import the sub-package `integrate` and call it `itg`.
 
 `NumPy` is probably the most used Python library since it offers multi-dimensional arrays and functions to manipulate them, along with many useful mathematical functions.
 
-Finally, `matplotlib.pyplot` is a library for making ploting, here it will be used to display the trajectory.
+Finally, `matplotlib.pyplot` is a library for making plotting, here it will be used to display the trajectory.
 
 ```python
 def derivs(y,t,E,B,q,m):
@@ -80,7 +80,7 @@ def derivs(y,t,E,B,q,m):
 
 This is the function which evaluates the first-order derivatives as functions of the *state variable*, here called `y`.
 This variable contains the configuration variables $x,y,z$ at indices 0,1,2 and velocities at 3,4,5.
-The function also has contains the independent variable `t` which is not used in the body of the funtion.
+The function also has contains the independent variable `t` which is not used in the body of the function.
 I am using the `np.cross()` function to keep the code similar to the vector equations but you can write the equations for each component separately in your function if you want to.
 
 ```python
@@ -120,20 +120,20 @@ Earth's [Van Allen radiation belts](https://en.wikipedia.org/wiki/Van_Allen_radi
 
 ## Exercises
 >  **Exercise 4**
->  Let us assume that the magnetic momement of the Earth is accurately described by a single magnetic dipole moment and orient our frame of reference in such a way that this the magnetic moment is **_m_** = *(0,0,M)* in Cartesian coordinates.
+>  Let us assume that the magnetic moment of the Earth is accurately described by a single magnetic dipole moment and orient our frame of reference in such a way that this the magnetic moment is **_m_** = *(0,0,M)* in Cartesian coordinates.
 >  * Express components of the magnetic field **_B_** in Cartesian coordinates.
->  * What is the value of *M* if the geomagneti field at the equator is *3.12e-5* T?
+>  * What is the value of *M* if the geomagnetic field at the equator is *3.12e-5* T?
 >
 >  **Exercise 5**
 >  * Analyze the motion of the high-energy proton in the geomagnetic field. What are the three components of the motion?
 >
 >  **Exercise 6**
 >  * Try changing the initial position of the proton
->  * What is the maximum initial distance from Earth's centre for which the proton still has a stable (bound) trajectory?
+>  * What is the maximum initial distance from Earth's center for which the proton still has a stable (bound) trajectory?
 >  * What is the minimum initial distance for which the proton does not hit the surface of the Earth?
 >
 >  **Advanced exercise**
->  * Replace the proton with an electron and try to find suitable initial conditions for a stable (bound) trajectory. Think before implementing it. Will the magnetic field requiered for an electron be higher or lower? How does the drift differ from that of the proton?
+>  * Replace the proton with an electron and try to find suitable initial conditions for a stable (bound) trajectory. Think before implementing it. Will the magnetic field required for an electron be higher or lower? How does the drift differ from that of the proton?
 
 Since the same equations and solvers apply here, let us jump to the implementation right away.
 
