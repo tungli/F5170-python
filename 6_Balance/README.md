@@ -14,7 +14,7 @@ In the picture below you will find the reactions and reaction rate temperature d
 ![scheme](https://github.com/tungli/F5170-python/blob/master/6_Balance/rate_table.png)
 
 To transform a set of chemical reactions to a set of ordinary differential equations (ODEs) describing the evolution of every species here is a general approach:
- * Take the *r*th equation of *M* reactions in total. It has the form of ![reac](http://mathurl.com/ycnjqt5p.png) where *a* and *b* are the stoichiometric coefficients (always nonnegative) of species *X*. Generally, there are two rate constants - forward and backward rates.
+ * Take the *r*th equation of *M* reactions in total. It has the form of ![reac](http://mathurl.com/ycnjqt5p.png) where *a* and *b* are the stoichiometric coefficients (always non-negative) of species *X*. Generally, there are two rate constants - forward and backward rates.
  * The ODE for the *i*th species is:
 
 ![masterODE](http://mathurl.com/yd4yxekn.png)
@@ -24,6 +24,16 @@ we used `[]` to represent the concentration.
 This may look scary, so here is an example with one-way reactions (like the ones for argon):
 
 ![ex](http://mathurl.com/ycv8c7w5.png)
+
+**Note**:
+A reaction with 3 reactants does not necessarily represent a three-body collision.
+If you have two reactions:
+
+![twobody](http://mathurl.com/yaecpw9l.png)
+
+and the second reaction is faster (more probable), then we may write this as:
+
+[!threebody](http://mathurl.com/yadrlr8h.png)
 
 
 ## Exercises
