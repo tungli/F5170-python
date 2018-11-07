@@ -32,7 +32,7 @@ The scripts referenced in the exercises are described in subsequent sections.
 >    1. The electron energy is expressed in electronvolts (eV).
 >    2. The y-axis scale is logarithmic
 >  
->  The logarithmic plot should look similar to this:
+>  The logarithmic plot should look similar (hopefully with better axes) to this:
 >  ![Data](https://github.com/tungli/F5170-python/blob/master/4_Data/data_plot.svg)
 >  
 >  * Look at your plot -- what are the excitation and ionization thresholds?
