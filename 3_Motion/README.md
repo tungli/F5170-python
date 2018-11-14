@@ -79,7 +79,7 @@ def derivs(y,t,E,B,q,m):
 ```
 
 This is the function which evaluates the first-order derivatives as functions of the *state variable*, here called `y`.
-This variable contains the configuration variables $x,y,z$ at indices 0,1,2 and velocities at 3,4,5.
+This variable contains the configuration variables *x,y,z* at indices 0,1,2 and velocities at 3,4,5.
 The function also has contains the independent variable `t` which is not used in the body of the function.
 I am using the `np.cross()` function to keep the code similar to the vector equations but you can write the equations for each component separately in your function if you want to.
 
