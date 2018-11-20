@@ -40,7 +40,7 @@ If you are not comfortable with using a black-box solver, this is the way for yo
 >  
 > ![prob3](http://mathurl.com/ycp4a5wj.png)
 >  
->  * Do you observe any drift? If yes, for what parameters did you use? What is the direction of the drift velocity for an electron and a positron?
+>  * Do you observe any drift? If yes, what parameters did you use? What is the direction of the drift velocity for an electron and a positron?
 >  * Try to match your observations with theoretical predictions.
 >  
 >  **Advanced exercise**
