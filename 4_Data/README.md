@@ -1,17 +1,12 @@
 # Data processing
-In this chapter, you will learn to use *for*-loops and *if* statement blocks and the basics of string processing.
+In this chapter, you will learn to use *for*-loops and *if* statement blocks and the basics of file manipulation.
 
 You will understand how to do those just by going over the examples, so I will not go into detail here.
 When writing statements in Python just **do not forget indenting and `:` signs**.
 
-There are two sets of data files you will be working here.
 
-The first data set contains parameters for different types of plasma.
-These parameters are specified with a pair "keyword" -- value.
-A "keyword" can be multiple words and is one of the following: *name, electron temperature, gas temperature, charged particle density, pressure*.
-It is separated from the corresponding value by a comma.
+The data files you will be working here (`csk[1-3].dat`) contain data for the cross sections of collision (in m<sup>2</sup>) of electrons with argon atom species for different temperatures (in Kelvin).
 
-The other data set (`csk[1-3].dat`) contains data for the cross sections of collision (in m<sup>2</sup>) of electrons with argon atom species for different temperatures (in Kelvin).
 In particular, `csk1.dat` contains the data for elastic collision:
 
 ![coll](http://mathurl.com/ycnhzk89.png)
