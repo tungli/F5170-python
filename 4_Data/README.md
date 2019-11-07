@@ -1,10 +1,17 @@
 # Data processing
-In this chapter, you will learn to use *for*-loops and *if* statement blocks.
+In this chapter, you will learn to use *for*-loops and *if* statement blocks and the basics of string processing.
 
 You will understand how to do those just by going over the examples, so I will not go into detail here.
 When writing statements in Python just **do not forget indenting and `:` signs**.
 
-The data files you will be working here (`csk[1-3].dat`) contain data for the cross sections of collision (in m<sup>2</sup>) of electrons with argon atom species for different temperatures (in Kelvin).
+There are two sets of data files you will be working here.
+
+The first data set contains parameters for different types of plasma.
+These parameters are specified with a pair "keyword" -- value.
+A "keyword" can be multiple words and is one of the following: *name, electron temperature, gas temperature, charged particle density, pressure*.
+It is separated from the corresponding value by a comma.
+
+The other data set (`csk[1-3].dat`) contains data for the cross sections of collision (in m<sup>2</sup>) of electrons with argon atom species for different temperatures (in Kelvin).
 In particular, `csk1.dat` contains the data for elastic collision:
 
 ![coll](http://mathurl.com/ycnhzk89.png)
@@ -112,6 +119,39 @@ There is no universal way to import data from files into Python, as far as I kno
 Here we use `open()`-`read()`-`close()` sequence to get to the file into a string variable.
 Then we manipulate the string, particularly, we use the `str.replace()` and `str.split()` methods to separate the values and then apply indexing to group the columns together.
 We use [list comprehension](https://www.pythonforbeginners.com/basics/list-comprehensions-in-python) instead of initializing arrays and adding values in a *for*-loop to keep the code short.
+
+
+## Saving data
+
+The easiest way to save maxtrix-like data would be to make use of NumPy's [savetxt function](https://docs.scipy.org/doc/numpy/reference/generated/numpy.savetxt.html).
+
+The hard way can be useful in some situations, so here is an example.
+Consider the arrays `x`, `y` from the script above.
+These arrays should have the same length.
+We could iterate through indices of these arrays and place each pair of values into a string which in turn will become one line of the file.
+Here is an example script:
+
+```python
+filename = 'new_file.data'
+line = []
+
+for i in range(len(x)):
+    line.append('{}, {}'.format(x[i], y[i]))
+
+file_content = '\n'.join(line)
+
+f = open(filename, 'w')
+f.write(file_content)
+f.close()
+```
+
+Two things to comment here:
+* We are making use of several string and list methods:
+   - `append` adds an element to the end of an already-existing list.
+   - `format` method which fills in a *template* string with its values. Notice that the conversion from numeric type to string is implicit (no need to call `str(x[i]`).
+   - `join` joins list elements to a string with '\n' in between.
+* In function `open`, the second argument means "open for writing". **This will overwrite the contents of the file, so be carefull with your file name.**
+
 
 ## Inverse matrix
 ```python
