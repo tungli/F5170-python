@@ -114,7 +114,7 @@ def odefun(y,t):
             -k4*ne*nArs\
             +k6*ne*nAr2p\
             -2*k10*nArs**2\
-            +k11*nArs*nAr
+            -k11*nArs*nAr
     #You need to fill in the correct expressions
     SArp = 1.0
     SAr2p = 1.0
