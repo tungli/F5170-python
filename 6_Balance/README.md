@@ -81,10 +81,10 @@ Then we define some constants.
 tsteps = 1000
 tspan = np.logspace(-11,-6,tsteps)
 
-nArs_init = 1e12
-nArp_init = 1e12
-nAr2p_init = 1e12
-ne_init = nArp_init +  nAr2p_init
+nArs_init = 1e12 # excited species
+nArp_init = 1e12 # positive atoms
+nAr2p_init = 1e12 # positive molecule
+ne_init = nArp_init +  nAr2p_init # electron density
 initial = [nArs_init, nArp_init, nAr2p_init, ne_init]
 ```
 To solve the system of ODEs, we need to define the time span of the integration and the initial conditions.
