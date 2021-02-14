@@ -8,7 +8,7 @@ data = d.replace('\n',',').split(',')[:-1:]
 x = np.array([float(i) for i in data[0::2]])
 y = np.array([float(i) for i in data[1::2]])
 
-v = np.linspace(0.0,1e7,1e6)
+v = np.linspace(0.0,1e7,int(1e6))
 sigma = interp1d(x,y,kind='cubic',bounds_error=False,fill_value=0.0)
 
 def Fv(v):
